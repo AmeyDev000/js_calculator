@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -105,8 +106,23 @@ input[type=button]:hover{
 }
 
 .table-box{
-    width: 360px;
+    width: 480px;
     height: auto;
     background-color: #f1f1f1;
     border: 1px solid #dbdbdb;
+}
+
+.disabled-text{
+    color: #adadad;
+    padding: 10px 8px;
+}
+
+.tableList{
+    width: 100%;
+    font-size: 14px;
+    border: 0;
+}
+
+.tableList tr td, .tableList tr th{
+    padding: 5px;
 }
