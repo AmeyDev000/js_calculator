@@ -28,7 +28,7 @@ function renderTable(){
     let columns = ["No.", "Name", "Designation", "Department", "Actions"];
 
     if(employees.length > 0){
-        let tr = document.createElement('tr'), th, td;
+        let tr = document.createElement('tr'), th, td, link;
         
         for (colName of columns) {
             th = document.createElement('th');
@@ -53,6 +53,17 @@ function renderTable(){
 
             td = document.createElement('td');
             td.appendChild(document.createTextNode(employees[i].department));
+            tr.appendChild(td);
+
+            td = document.createElement('td');
+            td.setAttribute("align", "center");
+            button = document.createElement('button');
+            button.setAttribute("class","deleteButton");
+            button.setAttribute("onclick","deleteEmployee()");
+            icon = document.createElement('i');
+            icon.setAttribute("class", "fa-solid fa-trash");
+            button.appendChild(icon);
+            td.appendChild(button);
             tr.appendChild(td);
 
             table.appendChild(tr);

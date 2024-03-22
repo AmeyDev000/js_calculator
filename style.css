@@ -124,5 +124,17 @@ input[type=button]:hover{
 }
 
 .tableList tr td, .tableList tr th{
+    background-color: #ffffff;
     padding: 5px;
+}
+
+.deleteButton{
+    background: none;
+    border: none;
+    color: #e98787;
+    transition: color 100ms ease-in;
+}
+
+.deleteButton:hover{
+    color: #bd1717;
 }
