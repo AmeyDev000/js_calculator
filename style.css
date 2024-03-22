@@ -6,6 +6,47 @@
 
 body{
     height: 100vh;
+}
+
+.navBar ul{
+    list-style-type: none;
+}
+
+.navBar ul li{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    position: relative;
+}
+
+.navBar ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #8a8a8a;
+    transition: 250ms ease-out;
+}
+
+.navBar ul li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2da59f;
+    transition: width 250ms ease-out;
+}
+
+.navBar ul li:hover a{
+    color: #000000;
+}
+
+.navBar ul li:hover:after{
+    width: 100%;
+}
+
+.container{
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +102,11 @@ input[type=button]:hover{
 
 #copy-button:hover{
     color: #636363;
+}
+
+.table-box{
+    width: 360px;
+    height: auto;
+    background-color: #f1f1f1;
+    border: 1px solid #dbdbdb;
 }
