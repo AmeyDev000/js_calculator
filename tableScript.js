@@ -25,6 +25,7 @@ function renderTable(){
     let target = document.getElementById('render-table');
     let table = document.createElement('table');
     table.setAttribute("class", "tableList");
+    table.setAttribute("id", "listOfUsers");
     let columns = ["No.", "Name", "Designation", "Department", "Actions"];
 
     if(employees.length > 0){
@@ -59,7 +60,7 @@ function renderTable(){
             td.setAttribute("align", "center");
             button = document.createElement('button');
             button.setAttribute("class","deleteButton");
-            button.setAttribute("onclick","deleteEmployee()");
+            button.setAttribute("onclick","deleteEmployee(this)");
             icon = document.createElement('i');
             icon.setAttribute("class", "fa-solid fa-trash");
             button.appendChild(icon);
@@ -76,4 +77,10 @@ function renderTable(){
 
 }
 
+function deleteEmployee(ele){{
+    let rowIndex = ele.parentElement.parentElement.rowIndex;
+    document.getElementById("listOfUsers").deleteRow(rowIndex);
+}}
+
 renderTable();
+
